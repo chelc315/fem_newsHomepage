@@ -188,6 +188,10 @@ button:hover {
   margin-bottom: .5em;
 }
 
+.popularArticleTitle {
+  color: hsl(240, 100%, 5%);
+}
+
 .popularArticleTitle:hover {
   color: hsl(5, 85%, 63%);
 }
