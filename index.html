@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/x-icon" href=“./images/favicon.ico" />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="W. logo" class="logo" />
+      <img src="./images/icon-menu.svg" alt="Menu Icon" class="menuOpen" id="menuOpen" onclick="showMenu()"/>
+      <nav id="navMenu">
+        <img src="./images/icon-menu-close.svg" alt="Menu Close Icon" class="menuClose" id="menuClose" onclick="hideMenu()">
+        <a href="#" class="navLink">Home</a>
+        <a href="#" class="navLink">New</a>
+        <a href="#" class="navLink">Popular</a>
+        <a href="#" class="navLink">Trending</a>
+        <a href="#" class="navLink">Categories</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="mainAreaContainer">
+        <section class="mainArticle">
+          <picture>
+            <source
+              media="(min-width: 600px)"
+              srcset="./images/image-web-3-desktop.jpg"
+            />
+            <img
+              src="./images/image-web-3-mobile.jpg"
+              alt="Web 3.0 photo"
+              class="mainArticleImg"
+            />
+          </picture>
+          <div class="articleContainer">
+            <h1 class="mainArticleTitle">The Bright Future of Web 3.0?</h1>
+            <div class="articleSubContainer">
+              <p>
+                We dive into the next evolution of the web that claims to put the
+                power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+              </p>
+              <button>Read more</button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="newArticles">
+          <h2>New</h2>
+          <div class="newArticle">
+            <a href="#">
+              <h3 class="newArticleTitle">Hydrogen VS Electric Cars</h3>
+            </a>
+            <p>
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </div>
+          <hr />
+          <div class="newArticle">
+            <a href="#">
+              <h3 class="newArticleTitle">The Downsides of AI Artistry</h3>
+            </a>
+            <p>
+              What are the possible adverse effects of on-demand AI image generation?
+            </p>
+          </div>
+          <hr />
+          <div class="newArticle">
+            <a href="#">
+              <h3 class="newArticleTitle">Is VC Funding Drying Up?</h3>
+            </a>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at what that means.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="popularArticles">
+        <div class="popularArticleContainer">
+          <img src="./images/image-retro-pcs.jpg" alt="Image of retro PCs" />
+          <div class="popularArticle">
+            <h2>01</h2>
+            <a href="#">
+              <h4 class="popularArticleTitle">Reviving Retro PCs</h4>
+            </a>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="popularArticleContainer">
+          <img
+            src="./images/image-top-laptops.jpg"
+            alt="Close-up image of laptop keyboard"
+          />
+          <div class="popularArticle">
+            <h2>02</h2>
+            <a href="#">
+              <h4 class="popularArticleTitle">Top 10 Laptops of 2022</h4>
+            </a>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="popularArticleContainer">
+          <img
+            src="./images/image-gaming-growth.jpg"
+            alt="Image of game controller suspended above a hand"
+          />
+          <div class="popularArticle">
+            <h2>03</h2>
+            <a href="#">
+              <h4 class="popularArticleTitle">The Growth of Gaming</h4>
+            </a>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by 
+        <a href="#">Chelsea Scerbo</a>.
+      </div>
+    </footer>
+
+    <script>
+      const navMenu = document.getElementById('navMenu');
+      const menuClose = document.getElementById('menuClose');
+
+      const showMenu = () => {
+        navMenu.style.width = '75%';
+        menuClose.style.visibility = 'visible';
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      };
+
+      const hideMenu = () => {
+        navMenu.style.width = '0';
+        menuClose.style.visibility = 'hidden';document.body.style.backgroundColor = "rgba(0,0,0,0)";
+      }
+
+    </script>
+  </body>
+</html>
